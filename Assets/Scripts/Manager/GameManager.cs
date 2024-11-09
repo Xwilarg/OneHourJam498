@@ -2,6 +2,7 @@ using OneHourJam.Player;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace OneHourJam.Manager
 {
@@ -15,9 +16,17 @@ namespace OneHourJam.Manager
         [SerializeField]
         private TMP_Text _word;
 
+        [SerializeField]
+        private Image _image;
+
+        [SerializeField]
+        private Sprite[] _sprites;
+
         private string _wValue = string.Empty;
 
         private Camera _cam;
+
+        private int _index;
 
         private string[] _words = new[]
         {
@@ -41,7 +50,7 @@ namespace OneHourJam.Manager
         {
             _wValue += c;
 
-            if (_words.Any(x => x.StartsWith(_wValue)))
+            if (_words[_index].StartsWith(_wValue))
             {
                 // OK
             }
