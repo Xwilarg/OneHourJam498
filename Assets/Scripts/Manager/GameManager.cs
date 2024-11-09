@@ -33,7 +33,8 @@ namespace OneHourJam.Manager
 
         private string[] _words = new[]
         {
-            "ROBE",
+            "UNIFORME",
+            "CHEMISIER",
             "CULOTTE"
         };
 
@@ -57,11 +58,22 @@ namespace OneHourJam.Manager
             if (_words[_index].ToUpperInvariant() == _wValue.ToUpperInvariant())
             {
                 _index++;
-                _hint.text = _words[_index];
                 _image.sprite = _sprites[_index];
                 _wValue = string.Empty;
+
+                if (_index == _sprites.Length - 1)
+                {
+                    foreach (var l in Object.FindObjectsByType<Letter>(FindObjectsSortMode.None))
+                    {
+                        Destroy(l.gameObject);
+                    }
+                }
+                else
+                {
+                    _hint.text = _words[_index];
+                }
             }
-            if (_words[_index].StartsWith(_wValue, System.StringComparison.InvariantCultureIgnoreCase))
+            else if (_words[_index].StartsWith(_wValue, System.StringComparison.InvariantCultureIgnoreCase))
             {
                 // OK
             }
