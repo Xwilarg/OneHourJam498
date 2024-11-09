@@ -61,7 +61,7 @@ namespace OneHourJam.Manager
             Vector2 pos;
             do
             {
-                pos = new Vector2(Random.Range(bounds.min.x + 1f, bounds.max.x - 1f), Random.Range(bounds.min.y + 1f, bounds.max.y - 1f));
+                pos = new Vector2(Random.Range(bounds.min.x + 3f, bounds.max.x - 3f), Random.Range(bounds.min.y + 1f, bounds.max.y - 1f));
             }
             while (Physics2D.OverlapCircle(pos, 1f, LayerMask.GetMask("Player", "Letter")));
 
