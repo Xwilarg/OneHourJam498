@@ -17,6 +17,9 @@ namespace OneHourJam.Manager
         private TMP_Text _word;
 
         [SerializeField]
+        private TMP_Text _hint;
+
+        [SerializeField]
         private Image _image;
 
         [SerializeField]
@@ -39,6 +42,7 @@ namespace OneHourJam.Manager
             Instance = this;
             _cam = Camera.main;
 
+            _hint.text = _words[_index];
             var letters = _words.SelectMany(x => x.ToCharArray()).Distinct();
             foreach (var l in letters)
             {
@@ -50,7 +54,14 @@ namespace OneHourJam.Manager
         {
             _wValue += c;
 
-            if (_words[_index].StartsWith(_wValue))
+            if (_words[_index].ToUpperInvariant() == _wValue.ToUpperInvariant())
+            {
+                _index++;
+                _hint.text = _words[_index];
+                _image.sprite = _sprites[_index];
+                _wValue = string.Empty;
+            }
+            if (_words[_index].StartsWith(_wValue, System.StringComparison.InvariantCultureIgnoreCase))
             {
                 // OK
             }
