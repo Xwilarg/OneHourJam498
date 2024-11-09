@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: d6b4cf4041418d343bbf59aac76bf5c5
+guid: a9805ab22d469ac4c892c8b46c4bc253
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6864848588413128581
-    second: fgirl_0
+      213: 1096361638390754167
+    second: fgirl-4_0
   - first:
-      213: -5586801708963736257
-    second: fgirl_1
+      213: -3473594051836735967
+    second: fgirl-4_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fgirl_0
+      name: fgirl-4_0
       rect:
         serializedVersion: 2
-        x: 380
-        y: 2098
-        width: 30
-        height: 10
+        x: 0
+        y: 1042
+        width: 93
+        height: 137
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,20 +144,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b703bc294982bb0a0800000000000000
-      internalID: -6864848588413128581
+      spriteID: 77b65a1f91f073f00800000000000000
+      internalID: 1096361638390754167
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fgirl_1
+      name: fgirl-4_1
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 1002
-        height: 2040
+        width: 983
+        height: 1974
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f35dba22271b772b0800000000000000
-      internalID: -5586801708963736257
+      spriteID: 12e8c5e1d905bcfc0800000000000000
+      internalID: -3473594051836735967
       vertices: []
       indices: 
       edges: []
@@ -186,8 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fgirl_0: -6864848588413128581
-      fgirl_1: -5586801708963736257
+      fgirl-4_0: 1096361638390754167
+      fgirl-4_1: -3473594051836735967
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
